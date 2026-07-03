@@ -195,4 +195,153 @@ button:hover{
 
 .gallery-box img:hover{
     transform:scale(1.05);
+}/* ==========================
+   KHỐI 5 - MAP - CONTACT - FOOTER
+========================== */
+
+iframe{
+    width:100%;
+    max-width:900px;
+    height:420px;
+    display:block;
+    margin:40px auto;
+    border:none;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+footer{
+    background:#6b4f3a;
+    color:#ffffff;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+    font-size:18px;
+    line-height:1.8;
+}
+
+footer a{
+    color:#ffffff;
+}
+
+div[style*="text-align:center"]{
+    margin:50px auto !important;
+}
+
+div[style*="text-align:center"] h2{
+    font-size:32px;
+    color:#6b4f3a;
+    margin-bottom:15px;
+}
+
+div[style*="text-align:center"] p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+div[style*="text-align:center"] a{
+    min-width:180px;
+    text-align:center;
+    transition:.3s;
+}
+
+div[style*="text-align:center"] a:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}/* ==========================
+   KHỐI 6 - RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+header h1{
+    font-size:32px;
+}
+
+.hero{
+    font-size:30px;
+    padding:50px 20px;
+}
+
+.menu h2,
+.about h2,
+.gallery h2{
+    font-size:28px;
+}
+
+.card{
+    max-width:100%;
+}
+
+.about{
+    padding:25px;
+}
+
+.gallery-box{
+    grid-template-columns:1fr;
+}
+
+iframe{
+    height:300px;
+}
+
+button{
+    width:100%;
+    max-width:320px;
+}
+
+div[style*="text-align:center"] a{
+    display:block;
+    width:90%;
+    max-width:320px;
+    margin:15px auto;
+}
+
+footer{
+    font-size:16px;
+}
+
+}
+
+@media (max-width:480px){
+
+header{
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:26px;
+}
+
+header p{
+    font-size:16px;
+}
+
+.hero{
+    font-size:24px;
+    padding:35px 15px;
+}
+
+.menu h2,
+.about h2,
+.gallery h2{
+    font-size:24px;
+}
+
+.card h3{
+    font-size:22px;
+}
+
+.price{
+    font-size:24px;
+}
+
+.about p{
+    font-size:16px;
+}
+
+iframe{
+    height:250px;
+}
+
 }
