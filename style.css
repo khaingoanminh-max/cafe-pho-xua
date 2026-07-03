@@ -435,5 +435,29 @@ iframe{
     height:38px;
     font-size:22px;
 }
+/* =========================
+   KHỐI 8 - HERO BANNER
+========================= */   
+.hero{
+    max-width:900px;
+    margin:40px auto;
+    background:#ffffff;
+    border-radius:20px;
+    padding:50px 30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
+.hero h2{
+    font-size:38px;
+    color:#6b4f3a;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#666;
+    line-height:1.8;
+    max-width:700px;
+    margin:0 auto;
 }
