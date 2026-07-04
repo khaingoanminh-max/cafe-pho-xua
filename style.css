@@ -461,3 +461,9 @@ iframe{
     max-width:700px;
     margin:0 auto;
 }
+
+   .hero-banner{
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
