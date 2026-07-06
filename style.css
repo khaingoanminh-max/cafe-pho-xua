@@ -641,4 +641,19 @@ p{
     font-size:20px;
     font-weight:bold;
 }
-   
+
+   /* ============================================
+   WEBSITE PREMIUM V3
+   CHƯƠNG 1 - SCROLL ANIMATION
+============================================ */
+
+.reveal{
+    opacity:0;
+    transform:translateY(70px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
