@@ -467,3 +467,30 @@ iframe{
     overflow: hidden;
     min-height: 500px;
 }
+
+   /*====================================
+  DESIGN SYSTEM - CAFE PHỐ XƯA V2.0
+====================================*/
+
+:root{
+
+    --coffee:#6f4e37;
+    --coffee-dark:#4b2e1f;
+    --coffee-light:#a67c52;
+
+    --cream:#f8f3eb;
+    --white:#ffffff;
+    --text:#2d2d2d;
+    --gray:#777;
+
+    --radius:20px;
+    --radius-small:12px;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    --transition:.35s ease;
+
+    --max-width:1200px;
+
+}
