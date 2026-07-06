@@ -557,3 +557,26 @@ p{
     margin-bottom:18px;
 
 }
+
+   /* ==========================================
+   CHƯƠNG 2 - HERO BANNER PREMIUM
+========================================== */
+
+.hero-banner{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    );
+
+    color:#ffffff;
+}
