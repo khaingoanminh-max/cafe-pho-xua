@@ -34,3 +34,43 @@ setInterval(() => {
 }, 4000);
 
 showSlide(0);
+// ==========================================
+// ANIMATION V6 PREMIUM
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    if (!("IntersectionObserver" in window)) {
+        reveals.forEach(item => item.classList.add("active"));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.15
+
+    });
+
+    reveals.forEach(section => {
+
+        observer.observe(section);
+
+    });
+
+});
