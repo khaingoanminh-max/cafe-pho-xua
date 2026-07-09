@@ -322,18 +322,14 @@ ul{
 }
 
 .hero-overlay{
-
     position:absolute;
-
     inset:0;
 
     background:linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.45)
+        rgba(35,22,12,.68),
+        rgba(59,36,22,.48)
     );
-
 }
-
 .hero-content{
 
     position:relative;
