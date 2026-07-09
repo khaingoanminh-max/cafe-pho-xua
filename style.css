@@ -591,7 +591,10 @@ ul{
     overflow:hidden;
     border:1px solid rgba(183,121,61,.15);
     box-shadow:0 15px 40px rgba(0,0,0,.08);
-    transition:all .45s ease;
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease;
     cursor:pointer;
 }
 
@@ -621,7 +624,8 @@ ul{
 .feature-icon{
     width:85px;
     height:85px;
-    transition:all .45s ease;
+
+    transition:transform .45s ease;
 
     margin:0 auto 25px;
     border-radius:50%;
