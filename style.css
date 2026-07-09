@@ -1668,3 +1668,109 @@ table{
     --z-tooltip:1050;
 
 }
+
+/*==========================================================
+    03. TYPOGRAPHY
+==========================================================*/
+
+html{
+    font-size:16px;
+}
+
+body{
+    font-family:var(--font-primary);
+    font-size:var(--font-size-base);
+    font-weight:var(--font-weight-regular);
+    line-height:1.7;
+    color:var(--color-text);
+    background:var(--color-bg);
+}
+
+/*==============================
+    HEADINGS
+==============================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family:var(--font-heading);
+    font-weight:var(--font-weight-bold);
+    color:var(--color-primary-dark);
+    line-height:1.2;
+    margin-bottom:var(--space-md);
+}
+
+h1{
+    font-size:clamp(2.75rem,5vw,4.5rem);
+}
+
+h2{
+    font-size:clamp(2rem,4vw,3rem);
+}
+
+h3{
+    font-size:clamp(1.5rem,3vw,2rem);
+}
+
+h4{
+    font-size:1.25rem;
+}
+
+h5{
+    font-size:1.125rem;
+}
+
+h6{
+    font-size:1rem;
+}
+
+/*==============================
+    PARAGRAPH
+==============================*/
+
+p{
+    margin-bottom:var(--space-md);
+    color:var(--color-text-light);
+}
+
+/*==============================
+    LINKS
+==============================*/
+
+a{
+    transition:color var(--transition-fast);
+}
+
+a:hover{
+    color:var(--color-primary);
+}
+
+/*==============================
+    STRONG
+==============================*/
+
+strong{
+    font-weight:var(--font-weight-bold);
+    color:var(--color-primary-dark);
+}
+
+/*==============================
+    SMALL TEXT
+==============================*/
+
+small{
+    font-size:var(--font-size-sm);
+    color:var(--color-text-light);
+}
+
+/*==============================
+    TEXT SELECTION
+==============================*/
+
+::selection{
+    background:var(--color-primary);
+    color:var(--color-white);
+}
