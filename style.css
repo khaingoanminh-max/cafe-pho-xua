@@ -1837,7 +1837,142 @@ grid-template-columns:1fr;
 /*==========================================================
     16. ANIMATIONS
 ==========================================================*/
+/* ==========================
+   REVEAL ANIMATION
+========================== */
 
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ==========================
+   FADE IN
+========================== */
+
+.fade-in{
+    animation:fadeIn .8s ease forwards;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* ==========================
+   SLIDE UP
+========================== */
+
+.slide-up{
+    animation:slideUp .8s ease forwards;
+}
+
+@keyframes slideUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   HOVER CARD
+========================== */
+
+.feature-card,
+.menu-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.feature-card:hover,
+.menu-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ==========================
+   IMAGE EFFECT
+========================== */
+
+.gallery img{
+
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================
+   BUTTON EFFECT
+========================== */
+
+.btn-premium,
+.btn-outline,
+.btn-call{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.btn-premium:hover,
+.btn-outline:hover,
+.btn-call:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================
+   REDUCED MOTION
+========================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto;
+
+    }
+
+}
 
 
 /*==========================================================
