@@ -1739,4 +1739,51 @@ grid-template-columns:1fr;
 .slide img:hover{
     transform:scale(1.02);
 }
+/* ==========================================
+   GALLERY SLIDER V6 FINAL - PART 2
+========================================== */
 
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:52px;
+    height:52px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.88);
+
+    color:#5b2416;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    z-index:10;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+}
+
+.prev{
+    left:18px;
+}
+
+.next{
+    right:18px;
+}
+
+.prev:hover,
+.next:hover{
+
+    background:#5b2416;
+
+    color:#fff;
+
+    transform:translateY(-50%) scale(1.08);
+
+}
