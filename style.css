@@ -1774,3 +1774,98 @@ small{
     background:var(--color-primary);
     color:var(--color-white);
 }
+
+/*==========================================================
+    04. GLOBAL
+==========================================================*/
+
+/*==============================
+    HTML & BODY
+==============================*/
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+/*==============================
+    BODY
+==============================*/
+
+body{
+    position:relative;
+}
+
+/*==============================
+    CONTAINER
+==============================*/
+
+.container{
+    width:min(100% - 2rem,var(--container-width));
+    margin-inline:auto;
+}
+
+/*==============================
+    SECTION
+==============================*/
+
+section{
+    padding:var(--space-4xl) 0;
+    position:relative;
+}
+
+/*==============================
+    IMAGES
+==============================*/
+
+img{
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+/*==============================
+    IFRAME
+==============================*/
+
+iframe{
+    border:0;
+    width:100%;
+}
+
+/*==============================
+    BUTTON DEFAULT
+==============================*/
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:var(--space-sm);
+
+    padding:0.9rem 1.8rem;
+
+    border-radius:var(--radius-round);
+
+    transition:all var(--transition-base);
+
+    font-weight:var(--font-weight-semibold);
+
+    cursor:pointer;
+}
+
+/*==============================
+    UTILITIES
+==============================*/
+
+.text-center{
+    text-align:center;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.w-100{
+    width:100%;
+}
