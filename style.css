@@ -617,11 +617,12 @@ ul{
 .feature-card:hover::before{
     opacity:1;
 }
-}
 
 .feature-icon{
     width:85px;
     height:85px;
+    transition:all .45s ease;
+
     margin:0 auto 25px;
     border-radius:50%;
     background:linear-gradient(135deg,#b7793d,#d89b5d);
@@ -631,6 +632,7 @@ ul{
     font-size:38px;
     color:#fff;
     box-shadow:0 12px 25px rgba(183,121,61,.35);
+}
 }
 
 .feature-card h3{
