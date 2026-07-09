@@ -1978,7 +1978,166 @@ grid-template-columns:1fr;
 /*==========================================================
     17. RESPONSIVE
 ==========================================================*/
+/* ==========================
+   RESPONSIVE V6 PREMIUM
+========================== */
 
+/* Large Desktop */
+
+@media (min-width:1400px){
+
+    .container,
+    .footer-container{
+
+        max-width:1320px;
+
+    }
+
+}
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .container{
+
+        width:94%;
+
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    h1{
+
+        font-size:clamp(2.5rem,5vw,3.5rem);
+
+    }
+
+    h2{
+
+        font-size:clamp(2rem,4vw,2.8rem);
+
+    }
+
+    .hero-content{
+
+        padding:40px 25px;
+
+    }
+
+    .menu-grid,
+    .features-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .container{
+
+        width:92%;
+
+    }
+
+    .main-nav{
+
+        width:100%;
+
+    }
+
+    .hero-content{
+
+        text-align:center;
+
+        padding:30px 20px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .hero-buttons a{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .menu-grid,
+    .features-grid,
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    iframe{
+
+        height:320px;
+
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
+    h1{
+
+        font-size:2rem;
+
+    }
+
+    h2{
+
+        font-size:1.6rem;
+
+    }
+
+    .hero-content{
+
+        padding:25px 15px;
+
+    }
+
+    .btn-premium,
+    .btn-outline,
+    .btn-call{
+
+        width:100%;
+
+    }
+
+    .menu-card,
+    .feature-card{
+
+        border-radius:16px;
+
+    }
+
+}
 
 
 /*==========================================================
