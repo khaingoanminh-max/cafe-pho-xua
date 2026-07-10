@@ -128,7 +128,48 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==========================================
 
 let cart = [];
+// ==========================================
+// LOCAL STORAGE
+// ==========================================
 
+const CART_STORAGE_KEY = "cafe-pho-xua-cart";
+
+// Lưu giỏ hàng
+function saveCart() {
+
+    localStorage.setItem(
+        CART_STORAGE_KEY,
+        JSON.stringify(cart)
+    );
+
+}
+
+// Đọc giỏ hàng
+function loadCart() {
+
+    const data = localStorage.getItem(CART_STORAGE_KEY);
+
+    if (!data) {
+
+        cart = [];
+
+        return;
+
+    }
+
+    try {
+
+        cart = JSON.parse(data);
+
+    } catch (error) {
+
+        console.error("Không thể đọc LocalStorage:", error);
+
+        cart = [];
+
+    }
+
+}
 // Cập nhật số lượng trên icon giỏ
 function updateCartCount() {
 
@@ -165,6 +206,9 @@ function addToCart(product, price) {
     }
 
     updateCartCount();
+    saveCart();
+
+renderCart();
 
     console.log("Cart:", cart);
 
@@ -333,6 +377,8 @@ if (checkoutBtn) {
 // ==========================================
 // INITIALIZE
 // ==========================================
+
+loadCart();
 
 updateCartCount();
 
