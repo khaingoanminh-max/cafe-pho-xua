@@ -331,3 +331,65 @@ if (cartOverlay) {
     });
 
 }
+// ==========================================
+// PART 4
+// CHECKOUT ZALO + INIT
+// ==========================================
+
+const checkoutBtn = document.getElementById("checkout-btn");
+
+if (checkoutBtn) {
+
+    checkoutBtn.addEventListener("click", () => {
+
+        if (cart.length === 0) {
+
+            alert("🛒 Giỏ hàng đang trống.");
+
+            return;
+
+        }
+
+        let message = "☕ ĐƠN ĐẶT HÀNG CAFE PHỐ XƯA\n\n";
+
+        let total = 0;
+
+        cart.forEach(item => {
+
+            const money = item.price * item.quantity;
+
+            total += money;
+
+            message +=
+                `${item.product}\n` +
+                `${item.quantity} x ${item.price.toLocaleString()}đ = ${money.toLocaleString()}đ\n\n`;
+
+        });
+
+        message +=
+            "----------------------\n" +
+            "TỔNG: " +
+            total.toLocaleString() +
+            "đ";
+
+        const zaloPhone = "0917856899";
+
+        window.open(
+
+            `https://zalo.me/${zaloPhone}?text=${encodeURIComponent(message)}`,
+
+            "_blank"
+
+        );
+
+    });
+
+});
+
+// ==========================================
+// INITIALIZE
+// ==========================================
+
+updateCartCount();
+
+renderCart();
