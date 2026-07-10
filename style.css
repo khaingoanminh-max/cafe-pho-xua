@@ -2355,3 +2355,76 @@ grid-template-columns:1fr;
         background .45s ease;
 
 }
+/* ==========================================
+   MINI CART V7.0
+========================================== */
+
+.cart-icon{
+
+    position:relative;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:#6F4E37;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+
+}
+
+.cart-icon:hover{
+
+    transform:translateY(-2px);
+
+    background:#8B5E3C;
+
+}
+
+.cart-count{
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-6px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:#e53935;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:2px solid #fff;
+
+}
