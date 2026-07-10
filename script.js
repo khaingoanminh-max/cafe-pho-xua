@@ -243,3 +243,91 @@ function showCart() {
     alert(text);
 
 }
+// ==========================================
+// PART 3B
+// OPEN CART + RENDER CART
+// ==========================================
+
+const cartIcon = document.getElementById("cart-icon");
+const cartPanel = document.getElementById("cart-panel");
+const cartOverlay = document.getElementById("cart-overlay");
+const closeCart = document.getElementById("close-cart");
+
+function renderCart() {
+
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    if (!cartItems || !cartTotal) return;
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML =
+            '<p class="cart-empty">Giỏ hàng đang trống.</p>';
+
+        cartTotal.textContent = "0đ";
+
+        return;
+    }
+
+    let html = "";
+    let total = 0;
+
+    cart.forEach(item => {
+
+        total += item.price * item.quantity;
+
+        html += `
+        <div class="cart-item">
+            <div>
+                <strong>${item.product}</strong><br>
+                ${item.quantity} × ${item.price.toLocaleString()}đ
+            </div>
+            <div>
+                ${(item.price * item.quantity).toLocaleString()}đ
+            </div>
+        </div>
+        `;
+
+    });
+
+    cartItems.innerHTML = html;
+    cartTotal.textContent = total.toLocaleString() + "đ";
+}
+
+// Mở giỏ
+if (cartIcon) {
+
+    cartIcon.addEventListener("click", () => {
+
+        renderCart();
+
+        cartPanel.classList.add("active");
+        cartOverlay.classList.add("active");
+
+    });
+
+}
+
+// Đóng giỏ
+if (closeCart) {
+
+    closeCart.addEventListener("click", () => {
+
+        cartPanel.classList.remove("active");
+        cartOverlay.classList.remove("active");
+
+    });
+
+}
+
+if (cartOverlay) {
+
+    cartOverlay.addEventListener("click", () => {
+
+        cartPanel.classList.remove("active");
+        cartOverlay.classList.remove("active");
+
+    });
+
+}
