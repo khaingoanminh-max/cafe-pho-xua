@@ -75,40 +75,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// ===============================
-// DAT MON QUA ZALO V1.0
-// ===============================
-
-const zaloLink = "https://zalo.me/84917856899";
-
-document.querySelectorAll(".menu-order-btn").forEach(button => {
-
-    button.addEventListener("click", function () {
-
-        const product = this.dataset.product;
-
-        const message =
-`☕ Xin chào Cafe Phố Xưa!
-
-Tôi muốn đặt:
-
-${product}
-
-Số lượng: 1 ly
-
-Địa chỉ:
-
-Ghi chú:
-
-Xin quán xác nhận giúp.
-
-Xin cảm ơn!`;
-
-        window.open(
-            zaloLink + "?text=" + encodeURIComponent(message),
-            "_blank"
-        );
-
-    });
-
-});
+// Đã tạm tắt chức năng mở Zalo để chuyển sang Mini Cart V7.
