@@ -2329,3 +2329,29 @@ grid-template-columns:1fr;
     }
 
 }
+/*==================================================
+ FEATURE CARD V6.4
+==================================================*/
+.feature-card{
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fcfaf7 100%
+    );
+
+    border:1px solid rgba(183,121,61,.12);
+
+    border-radius:26px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.06),
+        0 2px 8px rgba(183,121,61,.08);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease,
+        background .45s ease;
+
+}
