@@ -186,63 +186,7 @@ document.querySelectorAll(".menu-order-btn").forEach(button => {
     });
 
 });
-// ==========================================
-// PART 3A
-// HIỂN THỊ GIỎ HÀNG
-// ==========================================
 
-// Mở giỏ hàng khi bấm icon
-const cartIcon = document.getElementById("cart-icon");
-
-if (cartIcon) {
-
-    cartIcon.addEventListener("click", () => {
-
-        showCart();
-
-    });
-
-}
-
-// Hiển thị nội dung giỏ hàng
-function showCart() {
-
-    if (cart.length === 0) {
-
-        alert("🛒 Giỏ hàng đang trống.");
-
-        return;
-
-    }
-
-    let text = "🛒 GIỎ HÀNG\n\n";
-
-    let total = 0;
-
-    cart.forEach((item, index) => {
-
-        text +=
-            (index + 1) + ". " +
-            item.product +
-            " x" +
-            item.quantity +
-            "\n";
-
-        total += item.price * item.quantity;
-
-    });
-
-    text +=
-        "\n----------------------\n";
-
-    text +=
-        "Tổng tiền: " +
-        total.toLocaleString("vi-VN") +
-        "đ";
-
-    alert(text);
-
-}
 // ==========================================
 // PART 3B
 // OPEN CART + RENDER CART
