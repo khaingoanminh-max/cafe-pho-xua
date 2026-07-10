@@ -124,6 +124,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 // ==========================================
+// MINI CART ENGINE V7.0 - PART 2
+// ==========================================
+
+let cart = [];
+
+// Cập nhật số lượng trên icon giỏ
+function updateCartCount() {
+
+    const count = document.getElementById("cart-count");
+
+    if (!count) return;
+
+    let total = 0;
+
+    cart.forEach(item => {
+        total += item.quantity;
+    });
+
+    count.textContent = total;
+}
+
+// Thêm món vào giỏ
+function addToCart(product, price) {
+
+    const found = cart.find(item => item.product === product);
+
+    if (found) {
+
+        found.quantity++;
+
+    } else {
+
+        cart.push({
+            product: product,
+            price: Number(price),
+            quantity: 1
+        });
+
+    }
+
+    updateCartCount();
+
+    console.log("Cart:", cart);
+
+    alert("✅ Đã thêm " + product + " vào giỏ hàng.");
+}
+
+// Gắn sự kiện cho tất cả nút Đặt ngay
+document.querySelectorAll(".menu-order-btn").forEach(button => {
+
+    button.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const product = this.dataset.product;
+        const price = this.dataset.price;
+
+        addToCart(product, price);
+
+    });
+
+});
+// ==========================================
 // PART 2
 // MINI CART ENGINE
 // ==========================================
@@ -205,3 +268,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
