@@ -1679,4 +1679,523 @@ section{
     }
 
 }
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 3
+   Block 3E
+
+   Mobile Toggle System
+========================================================= */
+
+
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+
+.mobile-toggle{
+
+    display:none;
+
+    position:relative;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:48px;
+
+    height:48px;
+
+    padding:0;
+
+    border-radius:var(--radius-md);
+
+    background:transparent;
+
+    color:var(--color-primary-dark);
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal);
+
+}
+
+
+/* =========================================================
+   TOGGLE HOVER
+========================================================= */
+
+.mobile-toggle:hover{
+
+    background:rgba(122,75,42,.08);
+
+    color:var(--color-primary);
+
+}
+
+.mobile-toggle:focus-visible{
+
+    outline:3px solid var(--color-secondary);
+
+    outline-offset:3px;
+
+}
+
+
+/* =========================================================
+   TOGGLE ICON
+========================================================= */
+
+.mobile-toggle__icon{
+
+    position:relative;
+
+    width:24px;
+
+    height:18px;
+
+}
+
+
+/* =========================================================
+   TOGGLE LINE
+========================================================= */
+
+.mobile-toggle__line{
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    border-radius:var(--radius-pill);
+
+    background:currentColor;
+
+    transition:
+        transform var(--transition-normal),
+        opacity var(--transition-normal),
+        top var(--transition-normal);
+
+}
+
+.mobile-toggle__line:nth-child(1){
+
+    top:0;
+
+}
+
+.mobile-toggle__line:nth-child(2){
+
+    top:8px;
+
+}
+
+.mobile-toggle__line:nth-child(3){
+
+    top:16px;
+
+}
+
+
+/* =========================================================
+   ACTIVE STATE
+========================================================= */
+
+.mobile-toggle.is-active
+.mobile-toggle__line:nth-child(1){
+
+    top:8px;
+
+    transform:rotate(45deg);
+
+}
+
+.mobile-toggle.is-active
+.mobile-toggle__line:nth-child(2){
+
+    opacity:0;
+
+}
+
+.mobile-toggle.is-active
+.mobile-toggle__line:nth-child(3){
+
+    top:8px;
+
+    transform:rotate(-45deg);
+
+}
+
+
+/* =========================================================
+   MOBILE ONLY
+========================================================= */
+
+@media (max-width:991.98px){
+
+    .mobile-toggle{
+
+        display:inline-flex;
+
+    }
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 3
+   Block 3F
+
+   Mobile Navigation System
+========================================================= */
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-navigation{
+
+    position:fixed;
+
+    top:0;
+
+    right:0;
+
+    width:min(320px,100%);
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--color-surface);
+
+    box-shadow:var(--shadow-lg);
+
+    transform:translateX(100%);
+
+    transition:transform var(--transition-normal);
+
+    z-index:400;
+
+    overflow-y:auto;
+
+}
+
+
+/* =========================================================
+   OPEN STATE
+========================================================= */
+
+.mobile-navigation.is-open{
+
+    transform:translateX(0);
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION HEADER
+========================================================= */
+
+.mobile-navigation__header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    min-height:var(--header-height);
+
+    padding:var(--space-5);
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION BODY
+========================================================= */
+
+.mobile-navigation__body{
+
+    flex:1;
+
+    padding:var(--space-5);
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION LIST
+========================================================= */
+
+.mobile-navigation__list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-2);
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION LINK
+========================================================= */
+
+.mobile-navigation__link{
+
+    display:flex;
+
+    align-items:center;
+
+    min-height:48px;
+
+    padding:
+        var(--space-3)
+        var(--space-4);
+
+    border-radius:var(--radius-md);
+
+    color:var(--color-text);
+
+    font-weight:var(--font-weight-medium);
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal);
+
+}
+
+
+.mobile-navigation__link:hover,
+
+.mobile-navigation__link[aria-current="page"]{
+
+    background:rgba(122,75,42,.08);
+
+    color:var(--color-primary);
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION FOOTER
+========================================================= */
+
+.mobile-navigation__footer{
+
+    padding:var(--space-5);
+
+    border-top:1px solid var(--color-border);
+
+}
+
+
+/* =========================================================
+   MOBILE OVERLAY
+========================================================= */
+
+.mobile-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:var(--color-overlay);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal);
+
+    z-index:350;
+
+}
+
+
+/* =========================================================
+   OVERLAY OPEN
+========================================================= */
+
+.mobile-overlay.is-open{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width:992px){
+
+    .mobile-navigation,
+
+    .mobile-overlay{
+
+        display:none;
+
+    }
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 3
+   Block 3G
+
+   Header Production Polish
+========================================================= */
+
+
+/* =========================================================
+   HEADER TRANSITIONS
+========================================================= */
+
+.site-header,
+.site-header *{
+
+    transition-timing-function:ease;
+
+}
+
+
+/* =========================================================
+   TOUCH IMPROVEMENT
+========================================================= */
+
+.site-navigation__link,
+.header-actions__button,
+.mobile-toggle,
+.mobile-navigation__link,
+.button{
+
+    -webkit-tap-highlight-color:transparent;
+
+    touch-action:manipulation;
+
+}
+
+
+/* =========================================================
+   IMAGE OPTIMIZATION
+========================================================= */
+
+.site-branding__logo img{
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   TEXT RENDERING
+========================================================= */
+
+.site-branding__name,
+.site-navigation__link{
+
+    text-rendering:optimizeLegibility;
+
+}
+
+
+/* =========================================================
+   BUTTON IMPROVEMENT
+========================================================= */
+
+.button,
+.header-actions__button,
+.mobile-toggle{
+
+    user-select:none;
+
+}
+
+
+/* =========================================================
+   MOBILE SCROLL
+========================================================= */
+
+.mobile-navigation{
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+
+/* =========================================================
+   SAFE AREA SUPPORT
+========================================================= */
+
+.mobile-navigation{
+
+    padding-bottom:
+        env(safe-area-inset-bottom);
+
+}
+
+
+/* =========================================================
+   HEADER PERFORMANCE
+========================================================= */
+
+.site-header{
+
+    will-change:
+        background-color,
+        box-shadow;
+
+}
+
+
+/* =========================================================
+   DRAWER PERFORMANCE
+========================================================= */
+
+.mobile-navigation{
+
+    will-change:transform;
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    .mobile-toggle__line,
+    .mobile-navigation,
+    .site-header{
+
+        transition:none;
+
+    }
+
+}
 
