@@ -2452,3 +2452,440 @@ section{
     }
 
 }
+/* =========================================================
+   BLOCK 8G
+   Responsive Polish
+========================================================= */
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width:1600px){
+
+    :root{
+
+        --container-width:1440px;
+
+    }
+
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (max-width:1400px){
+
+    :root{
+
+        --container-width:1200px;
+
+    }
+
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width:1200px){
+
+    :root{
+
+        --container-width:1140px;
+
+    }
+
+}
+
+/* =========================================================
+   TABLET LANDSCAPE
+========================================================= */
+
+@media (max-width:1024px){
+
+    :root{
+
+        --section-spacing:4rem;
+
+    }
+
+    .container{
+
+        width:min(calc(100% - 2rem),960px);
+
+    }
+
+    .card-grid{
+
+        gap:1.5rem;
+
+    }
+
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:768px){
+
+    :root{
+
+        --section-spacing:3.5rem;
+
+        --font-size-3xl:2.2rem;
+
+        --font-size-2xl:1.8rem;
+
+    }
+
+    .container{
+
+        width:calc(100% - 1.5rem);
+
+    }
+
+    .card-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .section-header{
+
+        margin-bottom:2.5rem;
+
+    }
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+}
+
+/* =========================================================
+   MOBILE LARGE
+========================================================= */
+
+@media (max-width:576px){
+
+    :root{
+
+        --section-spacing:3rem;
+
+    }
+
+    .container{
+
+        width:calc(100% - 1.25rem);
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    .card{
+
+        border-radius:18px;
+
+    }
+
+    .card-body{
+
+        padding:1.25rem;
+
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:480px){
+
+    html{
+
+        font-size:15px;
+
+    }
+
+    .section-header__title{
+
+        max-width:100%;
+
+    }
+
+    .price-badge{
+
+        font-size:.85rem;
+
+        padding:.35rem .7rem;
+
+    }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width:390px){
+
+    :root{
+
+        --font-size-3xl:2rem;
+
+        --font-size-2xl:1.6rem;
+
+    }
+
+    .container{
+
+        width:calc(100% - 1rem);
+
+    }
+
+    .btn{
+
+        padding:.85rem 1rem;
+
+    }
+
+}
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width:320px){
+
+    html{
+
+        font-size:14px;
+
+    }
+
+    .container{
+
+        width:calc(100% - .8rem);
+
+    }
+
+    .card-body{
+
+        padding:1rem;
+
+    }
+
+    .section-header{
+
+        margin-bottom:2rem;
+
+    }
+
+}
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    section{
+
+        padding-block:2.5rem;
+
+    }
+
+}
+
+/* =========================================================
+   HIGH DPI DISPLAY
+========================================================= */
+
+@media (-webkit-min-device-pixel-ratio:2),
+       (min-resolution:192dpi){
+
+    img{
+
+        image-rendering:auto;
+
+    }
+
+}
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print{
+
+    .site-header,
+
+    .mobile-navigation,
+
+    .mobile-overlay,
+
+    .back-to-top{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+}
+/* =========================================================
+   BLOCK 8H
+   Final UI Audit & Lock
+========================================================= */
+
+/* =========================================================
+   GLOBAL PERFORMANCE
+========================================================= */
+
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+
+img,
+svg,
+video,
+canvas{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/* =========================================================
+   FINAL TYPOGRAPHY POLISH
+========================================================= */
+
+body{
+
+    text-wrap:pretty;
+
+    overflow-wrap:break-word;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    text-wrap:balance;
+
+}
+
+/* =========================================================
+   INTERACTIVE ELEMENTS
+========================================================= */
+
+a,
+button{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+button{
+
+    touch-action:manipulation;
+
+}
+
+/* =========================================================
+   IMAGE OPTIMIZATION
+========================================================= */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* =========================================================
+   SCROLL POLISH
+========================================================= */
+
+html{
+
+    scroll-padding-top:var(--header-height);
+
+}
+
+/* =========================================================
+   FOCUS IMPROVEMENT
+========================================================= */
+
+:focus-visible{
+
+    outline-offset:4px;
+
+}
+
+/* =========================================================
+   SAFE OVERFLOW
+========================================================= */
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+/* =========================================================
+   SELECTION POLISH
+========================================================= */
+
+::selection{
+
+    background:var(--color-primary);
+
+    color:#fff;
+
+}
+
+/* =========================================================
+   FINAL REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none!important;
+
+        transition:none!important;
+
+        scroll-behavior:auto!important;
+
+    }
+
+}
+
