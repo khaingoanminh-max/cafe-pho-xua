@@ -2585,7 +2585,7 @@ section{
 
     }
 
-    .btn{
+   .button{
 
         width:100%;
 
@@ -2653,7 +2653,7 @@ section{
 
     }
 
-    .btn{
+    .button{
 
         padding:.85rem 1rem;
 
