@@ -2371,7 +2371,6 @@ section{
 
 }
 
-}
 .reveal-scale{
 
     opacity:0;
@@ -2383,6 +2382,7 @@ section{
         opacity .8s,
 
         transform .8s;
+
 
 }
 
