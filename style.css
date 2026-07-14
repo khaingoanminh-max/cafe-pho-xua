@@ -421,3 +421,1262 @@ iframe{
     }
 
 }
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 2
+   Block 2A
+
+   Layout Foundation
+========================================================= */
+
+
+/* =========================================================
+   SITE WRAPPER
+========================================================= */
+
+.site-wrapper{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    background:var(--color-bg);
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main{
+
+    flex:1;
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+
+/* =========================================================
+   SECTION INNER
+========================================================= */
+
+.section-inner{
+
+    position:relative;
+
+    width:100%;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+
+    width:min(
+        calc(100% - 2rem),
+        var(--container-width)
+    );
+
+    margin-inline:auto;
+
+}
+
+
+/* =========================================================
+   GRID FOUNDATION
+========================================================= */
+
+.grid{
+
+    display:grid;
+
+    gap:var(--space-6);
+
+}
+
+
+/* =========================================================
+   FLEX FOUNDATION
+========================================================= */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-wrap{
+
+    flex-wrap:wrap;
+
+}
+
+.flex-column{
+
+    flex-direction:column;
+
+}
+
+.items-center{
+
+    align-items:center;
+
+}
+
+.items-start{
+
+    align-items:flex-start;
+
+}
+
+.items-end{
+
+    align-items:flex-end;
+
+}
+
+.justify-center{
+
+    justify-content:center;
+
+}
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+.justify-around{
+
+    justify-content:space-around;
+
+}
+
+
+/* =========================================================
+   GAP UTILITIES
+========================================================= */
+
+.gap-1{
+
+    gap:var(--space-1);
+
+}
+
+.gap-2{
+
+    gap:var(--space-2);
+
+}
+
+.gap-3{
+
+    gap:var(--space-3);
+
+}
+
+.gap-4{
+
+    gap:var(--space-4);
+
+}
+
+.gap-5{
+
+    gap:var(--space-5);
+
+}
+
+.gap-6{
+
+    gap:var(--space-6);
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 2
+   Block 2B
+
+   Section Header Foundation
+========================================================= */
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:var(--space-3);
+
+    margin-bottom:var(--space-7);
+
+    text-align:center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.section-header__eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:
+        var(--space-2)
+        var(--space-4);
+
+    border-radius:var(--radius-pill);
+
+    background:rgba(122,75,42,.08);
+
+    color:var(--color-primary);
+
+    font-size:var(--font-size-sm);
+
+    font-weight:var(--font-weight-semibold);
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.section-header__title{
+
+    max-width:18ch;
+
+    color:var(--color-primary-dark);
+
+    font-size:var(--font-size-2xl);
+
+    font-weight:var(--font-weight-bold);
+
+    line-height:var(--line-height-tight);
+
+    text-wrap:balance;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.section-header__description{
+
+    max-width:65ch;
+
+    color:var(--color-text-light);
+
+    font-size:var(--font-size-md);
+
+    line-height:var(--line-height-relaxed);
+
+}
+
+
+/* =========================================================
+   ALIGNMENT MODIFIERS
+========================================================= */
+
+.section-header--left{
+
+    align-items:flex-start;
+
+    text-align:left;
+
+}
+
+.section-header--right{
+
+    align-items:flex-end;
+
+    text-align:right;
+
+}
+
+
+/* =========================================================
+   SPACING MODIFIERS
+========================================================= */
+
+.section-header--compact{
+
+    margin-bottom:var(--space-5);
+
+}
+
+.section-header--large{
+
+    margin-bottom:var(--space-8);
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 2
+   Block 2C
+
+   Button System
+========================================================= */
+
+
+/* =========================================================
+   BUTTON FOUNDATION
+========================================================= */
+
+.button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:var(--space-2);
+
+    min-height:48px;
+
+    padding:
+        var(--space-3)
+        var(--space-5);
+
+    border:1px solid transparent;
+
+    border-radius:var(--radius-pill);
+
+    font-size:var(--font-size-md);
+
+    font-weight:var(--font-weight-semibold);
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    user-select:none;
+
+    cursor:pointer;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal),
+        transform var(--transition-fast);
+
+}
+
+
+/* =========================================================
+   BUTTON VARIANTS
+========================================================= */
+
+.button--primary{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+.button--primary:hover{
+
+    background:var(--color-primary-dark);
+
+}
+
+.button--secondary{
+
+    background:var(--color-secondary);
+
+    color:var(--color-primary-dark);
+
+}
+
+.button--secondary:hover{
+
+    filter:brightness(.95);
+
+}
+
+.button--outline{
+
+    border-color:var(--color-primary);
+
+    color:var(--color-primary);
+
+    background:transparent;
+
+}
+
+.button--outline:hover{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+.button--ghost{
+
+    background:transparent;
+
+    color:var(--color-primary);
+
+}
+
+.button--ghost:hover{
+
+    background:rgba(122,75,42,.08);
+
+}
+
+
+/* =========================================================
+   BUTTON STATES
+========================================================= */
+
+.button:active{
+
+    transform:scale(.98);
+
+}
+
+.button:focus-visible{
+
+    outline:3px solid var(--color-secondary);
+
+    outline-offset:3px;
+
+}
+
+.button:disabled,
+.button[disabled]{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   BUTTON SIZES
+========================================================= */
+
+.button--small{
+
+    min-height:40px;
+
+    padding:
+        var(--space-2)
+        var(--space-4);
+
+    font-size:var(--font-size-sm);
+
+}
+
+.button--large{
+
+    min-height:56px;
+
+    padding:
+        var(--space-4)
+        var(--space-6);
+
+    font-size:var(--font-size-lg);
+
+}
+
+
+/* =========================================================
+   BUTTON FULL WIDTH
+========================================================= */
+
+.button--block{
+
+    width:100%;
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 2
+   Block 2D
+
+   Card Foundation
+========================================================= */
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:100%;
+
+    overflow:hidden;
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-lg);
+
+    background:var(--color-surface);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal),
+        border-color var(--transition-normal);
+
+}
+
+
+/* =========================================================
+   CARD STATES
+========================================================= */
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-md);
+
+    border-color:rgba(122,75,42,.15);
+
+}
+
+.card:focus-within{
+
+    box-shadow:0 0 0 3px rgba(212,167,98,.25);
+
+}
+
+
+/* =========================================================
+   CARD MEDIA
+========================================================= */
+
+.card__media{
+
+    position:relative;
+
+    overflow:hidden;
+
+    aspect-ratio:4 / 3;
+
+}
+
+.card__media img{
+
+    width:100%;
+
+    height:100%;
+
+    transition:transform var(--transition-slow);
+
+}
+
+.card:hover .card__media img{
+
+    transform:scale(1.05);
+
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.card__body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-3);
+
+    padding:var(--space-5);
+
+    flex:1;
+
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.card__title{
+
+    color:var(--color-primary-dark);
+
+    font-size:var(--font-size-lg);
+
+    font-weight:var(--font-weight-bold);
+
+    line-height:var(--line-height-tight);
+
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.card__description{
+
+    color:var(--color-text-light);
+
+    line-height:var(--line-height-normal);
+
+    flex:1;
+
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.card__footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-3);
+
+    margin-top:auto;
+
+}
+
+
+/* =========================================================
+   CARD MODIFIERS
+========================================================= */
+
+.card--compact .card__body{
+
+    padding:var(--space-4);
+
+}
+
+.card--featured{
+
+    border-color:var(--color-secondary);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.card--flat{
+
+    box-shadow:none;
+
+}
+
+.card--borderless{
+
+    border:none;
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 3
+   Block 3A
+
+   Header Foundation
+========================================================= */
+
+
+/* =========================================================
+   SITE HEADER
+========================================================= */
+
+.site-header{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    z-index:300;
+
+    width:100%;
+
+    min-height:var(--header-height);
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:1px solid var(--color-border);
+
+    transition:
+        background-color var(--transition-normal),
+        box-shadow var(--transition-normal),
+        border-color var(--transition-normal);
+
+}
+
+
+/* =========================================================
+   HEADER INNER
+========================================================= */
+
+.site-header__inner{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    min-height:var(--header-height);
+
+    gap:var(--space-5);
+
+}
+
+
+/* =========================================================
+   HEADER SCROLLED
+========================================================= */
+
+.site-header.is-scrolled{
+
+    background:rgba(255,255,255,.98);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+/* =========================================================
+   HEADER SPACING
+========================================================= */
+
+.site-header .container{
+
+    height:100%;
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 3
+   Block 3B
+
+   Brand System
+========================================================= */
+
+
+/* =========================================================
+   SITE BRANDING
+========================================================= */
+
+.site-branding{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+
+/* =========================================================
+   BRAND LINK
+========================================================= */
+
+.site-branding__link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:var(--space-3);
+
+    color:inherit;
+
+    transition:
+        opacity var(--transition-normal),
+        transform var(--transition-fast);
+
+}
+
+.site-branding__link:hover{
+
+    opacity:.9;
+
+}
+
+.site-branding__link:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* =========================================================
+   BRAND LOGO
+========================================================= */
+
+.site-branding__logo{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:var(--color-surface);
+
+    box-shadow:var(--shadow-xs);
+
+    flex-shrink:0;
+
+}
+
+.site-branding__logo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+/* =========================================================
+   BRAND NAME
+========================================================= */
+
+.site-branding__name{
+
+    color:var(--color-primary-dark);
+
+    font-size:var(--font-size-lg);
+
+    font-weight:var(--font-weight-bold);
+
+    line-height:1.2;
+
+    white-space:nowrap;
+
+    transition:color var(--transition-normal);
+
+}
+
+.site-branding__link:hover .site-branding__name{
+
+    color:var(--color-primary);
+
+}
+
+
+/* =========================================================
+   BRAND DESCRIPTION
+========================================================= */
+
+.site-branding__description{
+
+    display:block;
+
+    color:var(--color-text-muted);
+
+    font-size:var(--font-size-xs);
+
+    font-weight:var(--font-weight-medium);
+
+    line-height:1.4;
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 3
+   Block 3C
+
+   Desktop Navigation System
+========================================================= */
+
+
+/* =========================================================
+   SITE NAVIGATION
+========================================================= */
+
+.site-navigation{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-left:auto;
+
+}
+
+
+/* =========================================================
+   NAVIGATION LIST
+========================================================= */
+
+.site-navigation__list{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-5);
+
+}
+
+
+/* =========================================================
+   NAVIGATION ITEM
+========================================================= */
+
+.site-navigation__item{
+
+    position:relative;
+
+}
+
+
+/* =========================================================
+   NAVIGATION LINK
+========================================================= */
+
+.site-navigation__link{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:48px;
+
+    padding:
+        var(--space-2)
+        var(--space-3);
+
+    color:var(--color-text);
+
+    font-size:var(--font-size-md);
+
+    font-weight:var(--font-weight-medium);
+
+    line-height:1;
+
+    transition:
+        color var(--transition-normal);
+
+}
+
+
+/* =========================================================
+   NAVIGATION HOVER
+========================================================= */
+
+.site-navigation__link:hover{
+
+    color:var(--color-primary);
+
+}
+
+
+/* =========================================================
+   ACTIVE INDICATOR
+========================================================= */
+
+.site-navigation__link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--color-primary);
+
+    border-radius:var(--radius-pill);
+
+    transform:translateX(-50%);
+
+    transition:
+        width var(--transition-normal);
+
+}
+
+
+.site-navigation__link:hover::after,
+
+.site-navigation__link[aria-current="page"]::after{
+
+    width:70%;
+
+}
+
+
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
+
+.site-navigation__link[aria-current="page"]{
+
+    color:var(--color-primary);
+
+    font-weight:var(--font-weight-semibold);
+
+}
+
+
+/* =========================================================
+   KEYBOARD ACCESSIBILITY
+========================================================= */
+
+.site-navigation__link:focus-visible{
+
+    border-radius:var(--radius-sm);
+
+}
+
+
+/* =========================================================
+   DESKTOP ONLY
+========================================================= */
+
+@media (max-width: 991.98px){
+
+    .site-navigation{
+
+        display:none;
+
+    }
+
+}
+/* =========================================================
+   CAFE PHỐ XƯA 4.0
+   Production Ready CSS
+   Package 03
+   Part 3
+   Block 3D
+
+   Header Actions System
+========================================================= */
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:var(--space-3);
+
+    flex-shrink:0;
+
+}
+
+
+/* =========================================================
+   ACTION GROUP
+========================================================= */
+
+.header-actions__group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-2);
+
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.header-actions__button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    color:var(--color-primary-dark);
+
+    background:transparent;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-fast);
+
+}
+
+.header-actions__button:hover{
+
+    background:rgba(122,75,42,.08);
+
+    color:var(--color-primary);
+
+}
+
+.header-actions__button:active{
+
+    transform:scale(.96);
+
+}
+
+.header-actions__button:focus-visible{
+
+    outline:3px solid var(--color-secondary);
+
+    outline-offset:3px;
+
+}
+
+
+/* =========================================================
+   ACTION ICON
+========================================================= */
+
+.header-actions__icon{
+
+    width:22px;
+
+    height:22px;
+
+    flex-shrink:0;
+
+}
+
+
+/* =========================================================
+   HEADER CTA
+========================================================= */
+
+.header-actions__cta{
+
+    margin-left:var(--space-2);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:991.98px){
+
+    .header-actions__cta{
+
+        display:none;
+
+    }
+
+}
+
