@@ -2597,7 +2597,7 @@ section{
 
     }
 
-    .card-body{
+  .card__body{
 
         padding:1.25rem;
 
@@ -2679,7 +2679,7 @@ section{
 
     }
 
-    .card-body{
+  .card__body{
 
         padding:1rem;
 
