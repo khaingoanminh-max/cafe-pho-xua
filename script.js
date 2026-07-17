@@ -155,3 +155,4 @@ updateHeaderState() {
     this.lastScrollY = currentScroll;
 
 },
+
