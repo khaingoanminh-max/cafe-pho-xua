@@ -362,32 +362,43 @@ App.modules = Object.create(null);
        HEADER MODULE
     ====================================================== */
 
-    App.modules.header = {
+   App.modules.header = {
 
-        init() {
+    initialized: false,
 
-            this.cache();
+    element: null,
 
-            this.bindEvents();
+    init() {
 
-            this.update();
+        this.cache();
 
-        },
+        if (!this.element) {
 
-        cache() {
+            return;
 
-            this.element = App.dom.siteHeader;
+        }
 
-            if (!this.element) {
+        this.bindEvents();
 
-                return;
+        this.update();
 
-            }
+        this.initialized = true;
 
-            App.state.header.height = this.element.offsetHeight;
+    },
 
-        },
+   cache() {
 
+    this.element = App.dom.siteHeader;
+
+    if (!this.element) {
+
+        return;
+
+    }
+
+    App.state.header.height = this.element.offsetHeight;
+
+},
         bindEvents() {
 
             /* Reserved for future header events */
@@ -416,12 +427,13 @@ App.modules = Object.create(null);
 
         },
 
-        destroy() {
+       destroy() {
 
-            this.element = null;
+    this.initialized = false;
 
-        }
+    this.element = null;
 
+}
     };
       /* =====================================================
        MODULE LIFECYCLE
