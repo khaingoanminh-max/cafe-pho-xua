@@ -439,27 +439,39 @@ App.modules = Object.create(null);
        MODULE LIFECYCLE
     ====================================================== */
 
-    App.updateModules = () => {
+   App.updateModules = () => {
 
-        Object.values(App.modules).forEach((module) => {
+    Object.values(App.modules).forEach((module) => {
 
-            if (
+        if (
 
-                module &&
+            module &&
 
-                module.initialized &&
+            module.initialized &&
 
-                typeof module.update === 'function'
+            typeof module.update === 'function'
 
-            ) {
+        ) {
+
+            try {
 
                 module.update();
 
+            } catch (error) {
+
+                if (App.state.debug) {
+
+                    console.error(error);
+
+                }
+
             }
 
-        });
+        }
 
-    };
+    });
+
+};
       /* =====================================================
        EVENT BINDINGS
     ====================================================== */
@@ -498,31 +510,50 @@ App.modules = Object.create(null);
        APPLICATION INITIALIZER
     ====================================================== */
 
-    App.init = () => {
+  App.init = () => {
 
-        App.cacheDom();
+    App.cacheDOM();
 
-        App.bindEvents();
+    Object.values(App.modules).forEach((module) => {
 
-        App.events.onResize();
+        if (
 
-        App.events.onScroll();
+            module &&
+            typeof module.init === 'function'
 
-        App.events.onVisibilityChange();
+        ) {
 
-        App.state.initialized = true;
+            try {
 
-        if (App.state.debug) {
+                module.init();
 
-            console.log(
+            } catch (error) {
 
-                `${App.config.appName} ${App.config.version} initialized.`
+                if (App.state.debug) {
 
-            );
+                    console.error(error);
+
+                }
+
+            }
 
         }
 
-    };
+    });
+
+    App.bindEvents();
+
+    App.events.onResize();
+
+    App.events.onScroll();
+
+    App.events.onVisibilityChange();
+
+    App.state.initialized = true;
+
+    ...
+};
+
 
     /* =====================================================
        APPLICATION BOOTSTRAP
