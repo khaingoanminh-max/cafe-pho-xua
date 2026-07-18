@@ -129,12 +129,96 @@
     ====================================================== */
 
     App.utils = {};
+   /* ==========================================================
+   PRODUCT REGISTRY
+========================================================== */
+
+App.product = {
+
+    initialized: false,
+
+    items: [],
+
+    register(product) {
+
+        if (!product) return;
+
+        this.items.push(product);
+
+    },
+
+    getAll() {
+
+        return [...this.items];
+
+    },
+
+    count() {
+
+        return this.items.length;
+
+    },
+
+    clear() {
+
+        this.items = [];
+
+    }
+
+};
+       hasProducts() {
+
+        return this.count() > 0;
+
+    },
+
+    findByName(name) {
+
+        return this.items.find(product => product.name === name) || null;
+
+    },
+
+    removeByName(name) {
+
+        this.items = this.items.filter(product => product.name !== name);
+
+    }
+   /* ==========================================================
+   PRODUCT MODULE
+========================================================== */
+
+App.modules.product = {
+
+    initialized: false,
+
+    init() {
+
+        if (this.initialized) return;
+
+        this.initialized = true;
+        App.product.initialized = true;
+
+    },
+
+    update() {
+
+        if (!this.initialized) return;
+
+    },
+
+    destroy() {
+
+        this.initialized = false;
+        App.product.initialized = false;
+
+    }
+
+};
 
    /* =====================================================
    MODULE REGISTRY
 ===================================================== */
-
-App.modules = Object.create(null);
+App.modules = App.modules || Object.create(null);
 
     /* =====================================================
        DEBOUNCE
