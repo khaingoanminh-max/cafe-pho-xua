@@ -193,10 +193,7 @@ App.modules.product = {
 
     init() {
 
-        if (this.initialized) return;
-
-        this.initialized = true;
-        App.product.initialized = true;
+        ...
 
     },
 
@@ -209,6 +206,7 @@ App.modules.product = {
     destroy() {
 
         this.initialized = false;
+
         App.product.initialized = false;
 
     }
