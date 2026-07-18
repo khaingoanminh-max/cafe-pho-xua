@@ -171,23 +171,35 @@ App.product = {
     }
 
 };
-       hasProducts() {
+   clear() {
 
-        return this.count() > 0;
+    this.items = [];
 
-    },
+},
 
-    findByName(name) {
+hasProducts() {
 
-        return this.items.find(product => product.name === name) || null;
+    return this.count() > 0;
 
-    },
+},
 
-    removeByName(name) {
+findByName(name) {
 
-        this.items = this.items.filter(product => product.name !== name);
+    return this.items.find(
+        product => product.name === name
+    ) || null;
 
-    }
+},
+
+removeByName(name) {
+
+    this.items = this.items.filter(
+        product => product.name !== name
+    );
+
+}
+
+};
    /* ==========================================================
    PRODUCT MODULE
 ========================================================== */
@@ -196,11 +208,13 @@ App.modules.product = {
 
     initialized: false,
 
-    init() {
+   init() {
 
-        ...
+    this.initialized = true;
 
-    },
+    App.product.initialized = true;
+
+},
 
     update() {
 
@@ -596,7 +610,7 @@ App.modules.product = {
 
   App.init = () => {
 
-    App.cacheDOM();
+    App.cacheDom();
 
     Object.values(App.modules).forEach((module) => {
 
