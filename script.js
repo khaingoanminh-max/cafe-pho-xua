@@ -171,11 +171,7 @@ App.product = {
     }
 
 };
-   clear() {
-
-    this.items = [];
-
-},
+   
 
 hasProducts() {
 
