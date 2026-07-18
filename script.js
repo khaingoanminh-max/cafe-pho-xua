@@ -134,7 +134,7 @@ App.modules = Object.create(null);
     ====================================================== */
 
     App.utils = {};
-   /* ==========================================================
+ /* ==========================================================
    PRODUCT REGISTRY
 ========================================================== */
 
@@ -168,32 +168,29 @@ App.product = {
 
         this.items = [];
 
+    },
+
+    hasProducts() {
+
+        return this.count() > 0;
+
+    },
+
+    findByName(name) {
+
+        return this.items.find(
+            product => product.name === name
+        ) || null;
+
+    },
+
+    removeByName(name) {
+
+        this.items = this.items.filter(
+            product => product.name !== name
+        );
+
     }
-
-};
-   
-
-hasProducts() {
-
-    return this.count() > 0;
-
-},
-
-findByName(name) {
-
-    return this.items.find(
-        product => product.name === name
-    ) || null;
-
-},
-
-removeByName(name) {
-
-    this.items = this.items.filter(
-        product => product.name !== name
-    );
-
-}
 
 };
    /* ==========================================================
